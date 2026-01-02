@@ -10,7 +10,8 @@ export async function getUser(){
         method: "GET",
         headers: {"Content-Type": "application/json", Authorization: `Bearer ${browserData.token}`}
     }
-    const response = await fetch(`${process.env.REACT_APP_HOST}/600/users/${browserData.cbid}`, requestOptions);
+    // const response = await fetch(`${process.env.REACT_APP_HOST}/600/users/${browserData.cbid}`, requestOptions);
+    const response = await fetch(`${process.env.REACT_APP_HOST}/api/users/${browserData.cbid}`, requestOptions); //netlify
     if(!response.ok){
         throw { message: response.statusText, status: response.status }; //eslint-disable-line
     }
@@ -24,7 +25,8 @@ export async function getUserOrders(){
         method: "GET",
         headers: {"Content-Type": "application/json", Authorization: `Bearer ${browserData.token}`}
     }
-    const response = await fetch(`${process.env.REACT_APP_HOST}/660/orders?user.id=${browserData.cbid}`, requestOptions);
+    // const response = await fetch(`${process.env.REACT_APP_HOST}/660/orders?user.id=${browserData.cbid}`, requestOptions);
+    const response = await fetch(`${process.env.REACT_APP_HOST}/api/orders?user.id=${browserData.cbid}`, requestOptions);
     if(!response.ok){
         throw { message: response.statusText, status: response.status }; //eslint-disable-line
     }
@@ -49,7 +51,8 @@ export async function createOrder(cartList, total, user){
         headers: { "Content-Type": "application/json", Authorization: `Bearer ${browserData.token}` },
         body: JSON.stringify(order)
     }
-    const response = await fetch(`${process.env.REACT_APP_HOST}/660/orders`, requestOptions);
+    // const response = await fetch(`${process.env.REACT_APP_HOST}/660/orders`, requestOptions);
+    const response = await fetch(`${process.env.REACT_APP_HOST}/api/orders`, requestOptions);
     if(!response.ok){
         throw { message: response.statusText, status: response.status }; //eslint-disable-line
     }
