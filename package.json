@@ -7,9 +7,16 @@
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.1",
     "@testing-library/user-event": "^13.5.0",
+    "flowbite": "^4.0.1",
+    "flowbite-react": "^0.12.15",
+    "json-server": "^0.17.4",
+    "json-server-auth": "^2.1.0",
+    "jwt-decode": "^4.0.0",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
+    "react-router-dom": "^7.11.0",
     "react-scripts": "5.0.1",
+    "react-toastify": "^11.0.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -35,5 +42,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.18",
+    "autoprefixer": "^10.4.23",
+    "install": "^0.13.0",
+    "npm": "^11.7.0",
+    "or": "^0.2.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "3.4"
   }
 }
